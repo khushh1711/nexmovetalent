@@ -18,7 +18,6 @@ import heroImg from "../assets/images/hero/discuss.jpg";
 import service1 from "../assets/images/hero/hero.jpg";
 import service2 from "../assets/images/hero/IT-staffing.jpg";
 import service3 from "../assets/images/hero/about.jpg";
-import About from "./About";
 
 
 

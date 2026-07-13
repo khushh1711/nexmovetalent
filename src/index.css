@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* ---------- GLOBAL ---------- */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    margin:0;
+
+    padding:0;
+
+    font-family:'Manrope',sans-serif;
+
+    background:#ffffff;
+
+    color:#0A1D3A;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+button{
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+a{
+
+    text-decoration:none;
+}
+
+::selection{
+
+    background:#059669;
+
+    color:white;
+}

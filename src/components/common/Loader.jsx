@@ -7,11 +7,11 @@ const Loader = () => {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.7 }}
-      className="fixed inset-0 z-[9999] bg-white flex items-center justify-center overflow-hidden"
+      className="fixed inset-0 z-9999 bg-white flex items-center justify-center overflow-hidden"
     >
       {/* Background Glow */}
 
-      <div className="absolute w-[650px] h-[650px] rounded-full bg-emerald-100 blur-[140px] opacity-60"></div>
+      <div className="absolute w-162.5 h-162.5 rounded-full bg-emerald-100 blur-[140px] opacity-60"></div>
 
       <div className="relative flex flex-col items-center">
 
@@ -62,10 +62,10 @@ const Loader = () => {
 
         {/* Progress Bar */}
 
-        <div className="mt-12 w-72 md:w-96 h-[6px] bg-slate-200 rounded-full overflow-hidden">
+        <div className="mt-12 w-72 md:w-96 h-1.5 bg-slate-200 rounded-full overflow-hidden">
 
           <motion.div
-            className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400"
+            className="h-full rounded-full bg-linear-to-r from-emerald-500 to-emerald-400"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{

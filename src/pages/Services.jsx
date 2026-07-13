@@ -207,7 +207,7 @@ const Services = () => {
                             <img
                                 src={heroImg}
                                 alt=""
-                                className="rounded-3xl shadow-2xl h-[520px] object-cover w-full"
+                                className="rounded-3xl shadow-2xl h-130 object-cover w-full"
                             />
 
                         </motion.div>

@@ -214,7 +214,7 @@ const About = () => {
                             <img
                                 src={heroImg}
                                 alt="About NexMoveTalent"
-                                className="w-full h-[520px] object-cover rounded-3xl shadow-2xl"
+                                className="w-full h-130 object-cover rounded-3xl shadow-2xl"
                             />
 
                             {/* Floating Card */}
@@ -277,7 +277,7 @@ const About = () => {
                             <img
                                 src={journeyImg}
                                 alt="Our Journey"
-                                className="w-full rounded-3xl shadow-xl object-cover h-[520px]"
+                                className="w-full rounded-3xl shadow-xl object-cover h-130"
                             />
 
                         </motion.div>

@@ -909,7 +909,7 @@ const Home = () => {
 
                         {/* Line */}
 
-                        <div className="absolute top-6 left-0 right-0 h-[2px] bg-slate-700 hidden lg:block"></div>
+                        <div className="absolute top-6 left-0 right-0 h-0.5 bg-slate-700 hidden lg:block"></div>
 
                         <div className="grid lg:grid-cols-5 gap-12">
 

@@ -203,7 +203,7 @@ const Contact = () => {
                             <img
                                 src={heroImg}
                                 alt="Contact NexMoveTalent"
-                                className="w-full h-[520px] object-cover rounded-3xl shadow-2xl"
+                                className="w-full h-130 object-cover rounded-3xl shadow-2xl"
                             />
 
                             <div className="absolute bottom-6 left-6 bg-white rounded-2xl shadow-xl px-6 py-5">
@@ -604,7 +604,7 @@ const Contact = () => {
 
                 <div className="container mx-auto px-6">
 
-                    <div className="rounded-3xl bg-gradient-to-r from-slate-900 to-slate-800 text-center px-12 py-20">
+                    <div className="rounded-3xl bg-linear-to-r from-slate-900 to-slate-800 text-center px-12 py-20">
 
                         <h2 className="text-5xl font-bold text-white">
 

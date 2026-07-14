@@ -93,7 +93,7 @@ const Contact = () => {
       ========================================== */}
 
             <section className="bg-white pt-24 pb-24 overflow-hidden">
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -235,7 +235,7 @@ const Contact = () => {
 
             <section className="pb-20 bg-white">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
@@ -289,7 +289,7 @@ const Contact = () => {
 
             <section className="pb-24 bg-white">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <div className="grid lg:grid-cols-2 overflow-hidden rounded-3xl shadow-xl">
 
@@ -407,7 +407,7 @@ const Contact = () => {
 
             <section className="py-24 bg-slate-50">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <div className="text-center max-w-3xl mx-auto">
 
@@ -507,7 +507,7 @@ const Contact = () => {
 
             <section className="py-24 bg-slate-900">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <div className="text-center text-white">
 
@@ -602,7 +602,7 @@ const Contact = () => {
 
             <section className="py-24 bg-white">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <div className="rounded-3xl bg-linear-to-r from-slate-900 to-slate-800 text-center px-12 py-20">
 

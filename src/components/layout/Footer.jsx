@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="bg-[#0A1D3A] text-white py-10 mt-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-345 mx-auto px-6 text-center">
         <h3 className="text-2xl font-bold">
           NexMove<span className="text-[#059669]">Talent</span>
         </h3>

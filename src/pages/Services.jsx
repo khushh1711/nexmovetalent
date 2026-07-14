@@ -132,7 +132,7 @@ const Services = () => {
 
             <section className="bg-white pt-24 pb-24 overflow-hidden">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-[1380px] mx-auto px-6">
 
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -223,7 +223,7 @@ const Services = () => {
 
             <section className="py-24 bg-slate-50">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-[1380px] mx-auto px-6">
 
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -338,7 +338,7 @@ const Services = () => {
 
             <section className="py-24 bg-white">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-[1380px] mx-auto px-6">
 
                     <div className="grid lg:grid-cols-2 gap-20 items-center">
 
@@ -412,7 +412,7 @@ const Services = () => {
 
             <section className="py-24 bg-slate-50">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-[1380px] mx-auto px-6">
 
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -490,7 +490,7 @@ const Services = () => {
 
             <section className="py-24 bg-white">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-[1380px] mx-auto px-6">
 
                     <div className="text-center mb-16">
 
@@ -575,7 +575,7 @@ const Services = () => {
 
             <section className="py-28 bg-slate-900">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-[1380px] mx-auto px-6">
 
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

@@ -260,7 +260,7 @@ const About = () => {
                     OUR JOURNEY
 ======================================================= */}
 
-            <section className="py-24 bg-white">
+            <section className="py-28 bg-white">
                 <div className="container mx-auto px-6">
 
                     <div className="grid lg:grid-cols-2 gap-20 items-center">

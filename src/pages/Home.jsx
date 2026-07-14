@@ -178,9 +178,9 @@ const Home = () => {
             {/* ================= HERO ================= */}
 
             <section className="pt-28 pb-20">
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-24 items-center">
 
                         {/* LEFT */}
 
@@ -283,7 +283,14 @@ const Home = () => {
                             <img
                                 src={heroImg}
                                 alt="Recruitment"
-                                className="rounded-3xl w-full shadow-2xl object-cover"
+                                className="
+                                w-full
+                                max-w-160
+                                ml-auto
+                                rounded-3xl
+                                shadow-2xl  
+                                object-cover
+                                "
                             />
 
                             {/* Floating Card */}
@@ -301,18 +308,18 @@ const Home = () => {
                                 }}
 
                                 className="
-                absolute
-                left-8
-                bottom-8
-                bg-white
-                rounded-2xl
-                shadow-xl
-                px-6
-                py-5
-                flex
-                items-center
-                gap-4
-                "
+                                absolute
+                                left-8
+                                bottom-8
+                                bg-white
+                                rounded-2xl
+                                shadow-xl
+                                px-6
+                                py-5
+                                flex
+                                items-center
+                                gap-4
+                                "
                             >
 
                                 <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
@@ -350,13 +357,13 @@ const Home = () => {
 
             <section className="pb-20">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
 
                         <div>
 
-                            <h2 className="text-5xl font-bold">
+                            <h2 className="text-5xl lg:text-6xl font-bold">
 
                                 5000+
 
@@ -372,7 +379,7 @@ const Home = () => {
 
                         <div>
 
-                            <h2 className="text-5xl font-bold">
+                            <h2 className="text-5xl lg:text-6xl font-bold">
 
                                 300+
 
@@ -388,7 +395,7 @@ const Home = () => {
 
                         <div>
 
-                            <h2 className="text-5xl font-bold">
+                            <h2 className="text-5xl lg:text-6xl font-bold">
 
                                 98%
 
@@ -404,7 +411,7 @@ const Home = () => {
 
                         <div>
 
-                            <h2 className="text-5xl font-bold">
+                            <h2 className="text-5xl lg:text-6xl font-bold">
 
                                 48h
 
@@ -426,8 +433,8 @@ const Home = () => {
 
             {/* ================= SERVICES ================= */}
 
-            <section className="py-24 bg-slate-50">
-                <div className="container mx-auto px-6">
+            <section className="py-28 bg-slate-50">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -643,9 +650,9 @@ const Home = () => {
 
             {/* ================= WHY CANDIDATES TRUST ================= */}
 
-            <section className="py-24">
+            <section className="py-28">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -679,7 +686,7 @@ const Home = () => {
                                 WHY NEXMOVETALENT
                             </span>
 
-                            <h2 className="text-5xl font-bold leading-tight mt-5">
+                            <h2 className="text-5xl lg:text-6xl font-bold leading-tight mt-5">
 
                                 Why Candidates Trust
                                 <br />
@@ -745,9 +752,9 @@ const Home = () => {
 
             {/* ================= INDUSTRIES ================= */}
 
-            <section className="py-24 bg-slate-50">
+            <section className="py-28 bg-slate-50">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <motion.div
 
@@ -876,9 +883,9 @@ const Home = () => {
 
             {/* ================= PROCESS ================= */}
 
-            <section className="bg-slate-950 py-24 overflow-hidden">
+            <section className="bg-slate-950 py-28 overflow-hidden">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -965,9 +972,9 @@ const Home = () => {
 
             {/* ================= TESTIMONIALS ================= */}
 
-            <section className="py-24">
+            <section className="py-28">
 
-                <div className="container mx-auto px-6">
+                <div className="w-full max-w-345 mx-auto px-6">
 
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -1076,7 +1083,7 @@ const Home = () => {
 
                 </div>
 
-                <div className="relative container mx-auto px-6">
+                <div className="relative w-full max-w-345 mx-auto px-6">
 
                     <motion.div
 

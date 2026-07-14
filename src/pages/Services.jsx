@@ -9,6 +9,7 @@ import {
 
 import Button from "../components/common/Button";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
@@ -106,6 +107,56 @@ const faqs = [
         question: "Do you provide interview preparation?",
         answer:
             "Yes. We help candidates with resume improvement, interview preparation and career guidance.",
+    },
+];
+
+const plans = [
+    {
+        name: "Career Kickstart",
+        price: "$5,000",
+        period: "one-time",
+        tagline: "Ideal for fresh graduates seeking entry-level positions.",
+        features: [
+            "Resume & LinkedIn Optimization",
+            "3 Private Interview Coaching Sessions",
+            "Direct Partner Network Submission",
+            "Standard Placement Support (Email)",
+            "Career Path Consultation",
+        ],
+        buttonText: "Enroll Now",
+        popular: false,
+    },
+    {
+        name: "Professional Accelerator",
+        price: "$7,000",
+        period: "one-time",
+        tagline: "Our most popular track for specialized IT & healthcare roles.",
+        features: [
+            "Premium Refined Resume & Portfolio",
+            "Unlimited Technical Mock Interviews",
+            "Priority Hiring Manager Matching",
+            "IT Project Direct Placement Track",
+            "Dedicated Personal Career Manager",
+            "1-on-1 Career Mentorship",
+        ],
+        buttonText: "Join Program",
+        popular: true,
+    },
+    {
+        name: "Elite VIP Placement",
+        price: "$12,000",
+        period: "one-time",
+        tagline: "Exclusive fast-track track for top-tier multinationals.",
+        features: [
+            "Guaranteed Corporate Bootcamp Access",
+            "Executive Fast-Track Placement",
+            "1-on-1 Senior Industry Director Mentoring",
+            "Guaranteed Placement Support Window",
+            "Lifetime Alumni Network Access",
+            "24/7 Priority VIP Support Line",
+        ],
+        buttonText: "Get VIP Access",
+        popular: false,
     },
 ];
 
@@ -482,6 +533,85 @@ const Services = () => {
 
                 </div>
 
+            </section>
+
+            {/* =======================================================
+                    PLACEMENT PLANS
+      ======================================================= */}
+            <section className="py-24 bg-slate-50 border-t border-b border-slate-100">
+                <div className="w-full max-w-[1380px] mx-auto px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-20"
+                    >
+                        <span className="uppercase tracking-[3px] text-sm font-semibold text-emerald-600">
+                            PLACEMENT PLANS
+                        </span>
+                        <h2 className="text-4xl font-bold mt-4">
+                            Structured Programs for Student Placement
+                        </h2>
+                        <p className="text-slate-500 mt-4 max-w-2xl mx-auto">
+                            Invest in your professional future. Our curated plans are designed to equip you with credentials, coaching, and direct placements in your target fields.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        {plans.map((plan, index) => (
+                            <motion.div
+                                key={plan.name}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                whileHover={{ y: -8 }}
+                                className={`relative bg-white rounded-3xl p-8 border ${
+                                    plan.popular
+                                        ? "border-emerald-500 shadow-xl lg:scale-105 z-10"
+                                        : "border-slate-200 shadow-sm"
+                                } flex flex-col justify-between`}
+                            >
+                                {plan.popular && (
+                                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                                        Most Popular
+                                    </span>
+                                )}
+
+                                <div>
+                                    <h3 className="text-2xl font-bold text-slate-900">{plan.name}</h3>
+                                    <p className="text-slate-500 text-sm mt-3 leading-relaxed">{plan.tagline}</p>
+                                    
+                                    <div className="mt-6 flex items-baseline gap-1.5">
+                                        <span className="text-5xl font-extrabold text-slate-900">{plan.price}</span>
+                                        <span className="text-slate-500 text-sm font-medium">/ {plan.period}</span>
+                                    </div>
+
+                                    <ul className="space-y-4 mt-8">
+                                        {plan.features.map((feature) => (
+                                            <li key={feature} className="flex items-start gap-3 text-slate-600 text-sm">
+                                                <CheckCircle size={18} className="text-emerald-500 shrink-0 mt-0.5" />
+                                                <span>{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className="mt-8">
+                                    <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                        <Button
+                                            variant={plan.popular ? "primary" : "secondary"}
+                                            className="w-full py-3"
+                                        >
+                                            {plan.buttonText}
+                                        </Button>
+                                    </Link>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
             </section>
 
             {/* =======================================================

@@ -8,6 +8,7 @@ import {
   Shield,
 } from "lucide-react";
 import logo from "../../assets/logo/NMT-logo-4.png";
+import eVerifyLogo from "../../assets/logo/e-verify.jpg";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -249,11 +250,20 @@ const Footer = () => {
         </div>
 
         {/* EOE and Legal Statement */}
-        <div className="py-8 text-xs text-slate-500 border-b border-slate-800 leading-6 flex flex-col md:flex-row items-start gap-4">
-          <Shield size={24} className="text-slate-600 shrink-0 md:mt-0.5" />
-          <p>
-            <strong>Equal Opportunity Employer (EOE):</strong> NexMoveTalent is committed to providing equal opportunities to all job seekers. All qualified candidates will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability status, veteran status, or any other characteristic protected by law.
-          </p>
+        <div className="py-8 text-xs text-slate-500 border-b border-slate-800 leading-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div className="flex items-start gap-4 max-w-4xl">
+            <Shield size={24} className="text-slate-600 shrink-0 md:mt-0.5" />
+            <p>
+              <strong>Equal Opportunity Employer (EOE):</strong> NexMoveTalent is committed to providing equal opportunities to all job seekers. All qualified candidates will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability status, veteran status, or any other characteristic protected by law.
+            </p>
+          </div>
+          <div className="flex items-center gap-4 shrink-0 bg-white/95 p-3 rounded-2xl shadow-sm border border-slate-700/50">
+            <img src={eVerifyLogo} alt="E-Verify Registered" className="h-10 w-auto object-contain" />
+            <div className="text-[10px] text-slate-800 font-semibold leading-tight">
+              E-Verify® Registered<br />
+              <span className="text-slate-500 font-medium">Employment Verified</span>
+            </div>
+          </div>
         </div>
 
         {/* Bottom copyright & legal links */}

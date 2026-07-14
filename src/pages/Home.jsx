@@ -17,6 +17,7 @@ import {
 
 import Button from "../components/common/Button";
 import { Helmet } from "react-helmet-async";
+import AnimatedCounter from "../components/common/AnimatedCounter";
 
 import heroImg from "../assets/images/hero/hero.jpg";
 import trustImg from "../assets/images/hero/discuss.jpg";
@@ -331,9 +332,7 @@ const Home = () => {
                                 <div>
 
                                     <h4 className="font-bold text-lg">
-
-                                        5000+
-
+                                        <AnimatedCounter value="5000+" />
                                     </h4>
 
                                     <p className="text-sm text-slate-500">
@@ -363,10 +362,8 @@ const Home = () => {
 
                         <div>
 
-                            <h2 className="text-5xl lg:text-6xl font-bold">
-
-                                5000+
-
+                            <h2 className="text-5xl lg:text-6xl font-bold text-slate-900">
+                                <AnimatedCounter value="5000+" />
                             </h2>
 
                             <p className="mt-3 text-slate-500">
@@ -379,10 +376,8 @@ const Home = () => {
 
                         <div>
 
-                            <h2 className="text-5xl lg:text-6xl font-bold">
-
-                                300+
-
+                            <h2 className="text-5xl lg:text-6xl font-bold text-slate-900">
+                                <AnimatedCounter value="300+" />
                             </h2>
 
                             <p className="mt-3 text-slate-500">
@@ -395,10 +390,8 @@ const Home = () => {
 
                         <div>
 
-                            <h2 className="text-5xl lg:text-6xl font-bold">
-
-                                98%
-
+                            <h2 className="text-5xl lg:text-6xl font-bold text-slate-900">
+                                <AnimatedCounter value="98%" />
                             </h2>
 
                             <p className="mt-3 text-slate-500">
@@ -411,10 +404,8 @@ const Home = () => {
 
                         <div>
 
-                            <h2 className="text-5xl lg:text-6xl font-bold">
-
-                                48h
-
+                            <h2 className="text-5xl lg:text-6xl font-bold text-slate-900">
+                                <AnimatedCounter value="48h" />
                             </h2>
 
                             <p className="mt-3 text-slate-500">

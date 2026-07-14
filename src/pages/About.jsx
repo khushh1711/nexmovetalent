@@ -3,6 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 import Button from "../components/common/Button";
 import { Helmet } from "react-helmet-async";
+import AnimatedCounter from "../components/common/AnimatedCounter";
 
 // Images
 import heroImg from "../assets/images/hero/about.jpg";
@@ -232,9 +233,7 @@ const About = () => {
                                     <div>
 
                                         <h3 className="text-xl font-bold text-slate-900">
-
-                                            5000+
-
+                                            <AnimatedCounter value="5000+" />
                                         </h3>
 
                                         <p className="text-sm text-slate-500">
@@ -744,9 +743,7 @@ const About = () => {
                         <div>
 
                             <h2 className="text-5xl font-bold text-emerald-600">
-
-                                5000+
-
+                                <AnimatedCounter value="5000+" />
                             </h2>
 
                             <p className="mt-4 text-slate-600">
@@ -760,9 +757,7 @@ const About = () => {
                         <div>
 
                             <h2 className="text-5xl font-bold text-emerald-600">
-
-                                300+
-
+                                <AnimatedCounter value="300+" />
                             </h2>
 
                             <p className="mt-4 text-slate-600">
@@ -776,9 +771,7 @@ const About = () => {
                         <div>
 
                             <h2 className="text-5xl font-bold text-emerald-600">
-
-                                98%
-
+                                <AnimatedCounter value="98%" />
                             </h2>
 
                             <p className="mt-4 text-slate-600">
@@ -792,12 +785,10 @@ const About = () => {
                         <div>
 
                             <h2 className="text-5xl font-bold text-emerald-600">
-
-                                24/7
-
+                                <AnimatedCounter value="24/7" />
                             </h2>
 
-                            <p className="mt-4 text-slate-600">
+                            <p className="mt-4 text-slate-600 font-normal">
 
                                 Dedicated Support
 

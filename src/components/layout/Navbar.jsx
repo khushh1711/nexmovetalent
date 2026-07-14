@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/logo/NMT-logo-3.png";
 
 const Navbar = () => {
@@ -80,14 +81,20 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className={({ isActive }) =>
-                  `font-semibold transition duration-300 ${isActive
-                    ? "text-[#059669]"
-                    : "text-slate-700 hover:text-[#059669]"
-                  }`
-                }
+                className="relative py-2 font-semibold transition duration-300"
               >
-                {link.name}
+                {({ isActive }) => (
+                  <span className={isActive ? "text-[#059669]" : "text-slate-700 hover:text-[#059669]"}>
+                    {link.name}
+                    {isActive && (
+                      <motion.span
+                        layoutId="navActiveLine"
+                        className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#059669] rounded-full"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                  </span>
+                )}
               </NavLink>
             ))}
 
@@ -130,39 +137,51 @@ const Navbar = () => {
 
       </div>
 
-      {mobileMenu && (
-        <div className="lg:hidden bg-white shadow-lg">
+      <AnimatePresence>
+        {mobileMenu && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden bg-white shadow-lg overflow-hidden border-t border-slate-100"
+          >
 
-          <div className="flex flex-col px-6 py-6 gap-5">
+            <div className="flex flex-col px-6 py-6 gap-5">
 
-            {links.map((link) => (
-              <NavLink
-                key={link.path}
-                to={link.path}
-                onClick={() => setMobileMenu(false)}
-                className="font-semibold text-slate-700 hover:text-[#059669]"
+              {links.map((link) => (
+                <NavLink
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setMobileMenu(false)}
+                  className={({ isActive }) =>
+                    `font-semibold transition duration-300 ${isActive ? "text-[#059669]" : "text-slate-700 hover:text-[#059669]"}`
+                  }
+                >
+                  {link.name}
+                </NavLink>
+              ))}
+
+              <button
+                className="
+                mt-3
+                bg-[#059669]
+                text-white
+                py-3
+                rounded-xl
+                font-semibold
+                hover:bg-emerald-700
+                transition-colors
+                "
               >
-                {link.name}
-              </NavLink>
-            ))}
+                Apply Now
+              </button>
 
-            <button
-              className="
-              mt-3
-              bg-[#059669]
-              text-white
-              py-3
-              rounded-xl
-              font-semibold
-              "
-            >
-              Apply Now
-            </button>
+            </div>
 
-          </div>
-
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

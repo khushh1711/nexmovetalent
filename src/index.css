@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --max-width-345: 86.25rem;
+}
+
 /* ---------- GLOBAL ---------- */
 
 html{

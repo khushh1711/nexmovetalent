@@ -17,6 +17,8 @@ import {
 
 import Button from "../components/common/Button";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
+import FadeInImage from "../components/common/FadeInImage";
 import AnimatedCounter from "../components/common/AnimatedCounter";
 
 import heroImg from "../assets/images/hero/hero.jpg";
@@ -163,6 +165,7 @@ const testimonials = [
 ];
 
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <>
 
@@ -198,7 +201,7 @@ const Home = () => {
 
                                 <CheckCircle2 size={16} />
 
-                                Premium Recruitment Partner
+                                USA & Canada Recruitment Solutions
 
                             </div>
 
@@ -227,21 +230,21 @@ const Home = () => {
 
                             {/* Buttons */}
 
-                            <div className="mt-10 flex flex-wrap gap-5">
+                             <div className="mt-10 flex flex-wrap gap-5">
 
-                                <Button>
+                                 <Button onClick={() => navigate('/contact?role=candidate')}>
 
-                                    Apply Now
+                                     Apply Now
 
-                                </Button>
+                                 </Button>
 
-                                <Button variant="secondary">
+                                 <Button variant="secondary" onClick={() => navigate('/services')}>
 
-                                    Explore Services
+                                     Explore Services
 
-                                </Button>
+                                 </Button>
 
-                            </div>
+                             </div>
 
                             {/* Trust Points */}
 
@@ -281,16 +284,16 @@ const Home = () => {
 
                             {/* Image */}
 
-                            <img
-                                src={heroImg}
-                                alt="Recruitment"
-                                className="
-                                w-full
-                                max-w-160
-                                ml-auto
-                                rounded-3xl
-                                shadow-2xl  
-                                object-cover
+                             <FadeInImage
+                                 src={heroImg}
+                                 alt="Recruitment"
+                                 className="
+                                 w-full
+                                 max-w-160
+                                 ml-auto
+                                 rounded-3xl
+                                 shadow-2xl  
+                                 object-cover
                                 "
                             />
 
@@ -505,7 +508,7 @@ const Home = () => {
 
                             </ul>
 
-                            <button className="mt-10 font-semibold text-emerald-600 flex items-center gap-2 hover:gap-3 transition-all">
+                            <button className="mt-10 font-semibold text-emerald-600 flex items-center gap-2 hover:gap-3 transition-all" onClick={() => navigate('/services/core-recruitment')}>
 
                                 Learn More
 
@@ -565,7 +568,7 @@ const Home = () => {
 
                             </ul>
 
-                            <button className="mt-10 font-semibold text-emerald-600 flex items-center gap-2 hover:gap-3 transition-all">
+                            <button className="mt-10 font-semibold text-emerald-600 flex items-center gap-2 hover:gap-3 transition-all" onClick={() => navigate('/services/staffing')}>
 
                                 Learn More
 
@@ -624,7 +627,7 @@ const Home = () => {
 
                             </ul>
 
-                            <button className="mt-10 font-semibold text-emerald-600 flex items-center gap-2 hover:gap-3 transition-all">
+                            <button className="mt-10 font-semibold text-emerald-600 flex items-center gap-2 hover:gap-3 transition-all" onClick={() => navigate('/services/software-development')}>
 
                                 Learn More
 
@@ -656,11 +659,11 @@ const Home = () => {
                             viewport={{ once: true }}
                         >
 
-                            <img
-                                src={trustImg}
-                                alt="Candidate Success"
-                                className="rounded-3xl shadow-xl w-full object-cover"
-                            />
+                             <FadeInImage
+                                 src={trustImg}
+                                 alt="Candidate Success"
+                                 className="rounded-3xl shadow-xl w-full object-cover"
+                             />
 
                         </motion.div>
 
@@ -785,12 +788,13 @@ const Home = () => {
 
                         </div>
 
-                        <Button
-                            variant="secondary"
-                            className="mt-8 lg:mt-0"
-                        >
-                            View All Sectors
-                        </Button>
+                         <Button
+                             variant="secondary"
+                             className="mt-8 lg:mt-0"
+                             onClick={() => navigate('/services')}
+                         >
+                             View All Sectors
+                         </Button>
 
                     </motion.div>
 
@@ -802,21 +806,24 @@ const Home = () => {
 
                                 key={industry.title}
 
-                                initial={{ opacity: 0, y: 40 }}
+                                initial={{ opacity: 0, y: 20 }}
 
                                 whileInView={{ opacity: 1, y: 0 }}
 
                                 transition={{
-                                    duration: .5,
-                                    delay: index * .08
+                                    duration: 0.8,
+                                    delay: index * 0.05,
+                                    ease: [0.16, 1, 0.3, 1]
                                 }}
 
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-50px" }}
 
                                 whileHover={{
                                     y: -8,
                                     scale: 1.02
                                 }}
+
+                                onClick={() => navigate(`/services?industry=${industry.title.toLowerCase().replace(/ & /g, '-')}`)}
 
                                 className="
                     bg-white
@@ -915,13 +922,14 @@ const Home = () => {
 
                                 <motion.div
                                     key={step.number}
-                                    initial={{ opacity: 0, y: 40 }}
+                                    initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{
-                                        duration: .5,
-                                        delay: index * .15,
+                                        duration: 0.8,
+                                        delay: index * 0.08,
+                                        ease: [0.16, 1, 0.3, 1]
                                     }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-50px" }}
                                     className="relative text-center"
                                 >
 
@@ -996,13 +1004,14 @@ const Home = () => {
 
                             <motion.div
                                 key={item.name}
-                                initial={{ opacity: 0, y: 40 }}
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{
-                                    duration: .5,
-                                    delay: index * .15,
+                                    duration: 0.8,
+                                    delay: index * 0.08,
+                                    ease: [0.16, 1, 0.3, 1]
                                 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, margin: "-50px" }}
                                 whileHover={{
                                     y: -8,
                                 }}
@@ -1023,11 +1032,11 @@ const Home = () => {
 
                                 <div className="flex items-center gap-4 mt-8">
 
-                                    <img
-                                        src={item.image}
-                                        alt={item.name}
-                                        className="w-14 h-14 rounded-full object-cover"
-                                    />
+                                     <FadeInImage
+                                         src={item.image}
+                                         alt={item.name}
+                                         className="w-14 h-14 rounded-full object-cover shrink-0"
+                                     />
 
                                     <div>
 
@@ -1112,21 +1121,21 @@ const Home = () => {
 
                         </p>
 
-                        <div className="mt-12 flex flex-wrap justify-center gap-5">
+                         <div className="mt-12 flex flex-wrap justify-center gap-5">
 
-                            <Button>
+                             <Button onClick={() => navigate('/contact?role=candidate')}>
 
-                                Apply Now
+                                 Apply Now
 
-                            </Button>
+                             </Button>
 
-                            <Button variant="secondary">
+                             <Button variant="secondary" onClick={() => navigate('/contact')}>
 
-                                Contact Us
+                                 Contact Us
 
-                            </Button>
+                             </Button>
 
-                        </div>
+                         </div>
 
                     </motion.div>
 

@@ -9,7 +9,8 @@ import {
 
 import Button from "../components/common/Button";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import FadeInImage from "../components/common/FadeInImage";
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
@@ -162,7 +163,7 @@ const plans = [
 
 
 const Services = () => {
-
+    const navigate = useNavigate();
     const [activeFAQ, setActiveFAQ] = useState(0);
 
     return (
@@ -226,21 +227,24 @@ const Services = () => {
 
                             </p>
 
-                            <div className="mt-10 flex flex-wrap gap-4">
+                             <div className="mt-10 flex flex-wrap gap-4">
 
-                                <Button>
+                                 <Button onClick={() => {
+                                     const el = document.getElementById("services-grid");
+                                     if (el) el.scrollIntoView({ behavior: "smooth" });
+                                 }}>
 
-                                    Explore Services
+                                     Explore Services
 
-                                </Button>
+                                 </Button>
 
-                                <Button variant="secondary">
+                                 <Button variant="secondary" onClick={() => navigate('/contact')}>
 
-                                    Contact Us
+                                     Contact Us
 
-                                </Button>
+                                 </Button>
 
-                            </div>
+                             </div>
 
                         </motion.div>
 
@@ -254,11 +258,11 @@ const Services = () => {
                             className="relative"
                         >
 
-                            <img
-                                src={heroImg}
-                                alt=""
-                                className="rounded-3xl shadow-2xl h-130 object-cover w-full"
-                            />
+                             <FadeInImage
+                                 src={heroImg}
+                                 alt=""
+                                 className="rounded-3xl shadow-2xl h-130 object-cover w-full"
+                             />
 
                         </motion.div>
 
@@ -272,7 +276,7 @@ const Services = () => {
                     SERVICES
 ======================================================= */}
 
-            <section className="py-24 bg-slate-50">
+            <section id="services-grid" className="py-24 bg-slate-50">
 
                 <div className="w-full max-w-[1380px] mx-auto px-6">
 
@@ -319,24 +323,25 @@ const Services = () => {
 
                                 <motion.div
                                     key={index}
-                                    initial={{ opacity: 0, y: 40 }}
+                                    initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{
-                                        duration: .5,
-                                        delay: index * .15,
+                                        duration: 0.8,
+                                        delay: index * 0.1,
+                                        ease: [0.16, 1, 0.3, 1]
                                     }}
-                                    viewport={{ once: true }}
+                                    viewport={{ once: true, margin: "-50px" }}
                                     whileHover={{
                                         y: -8,
                                     }}
                                     className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition"
                                 >
 
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="h-60 w-full object-cover"
-                                    />
+                                     <FadeInImage
+                                         src={service.image}
+                                         alt={service.title}
+                                         className="h-60 w-full object-cover"
+                                     />
 
                                     <div className="p-8">
 
@@ -361,13 +366,19 @@ const Services = () => {
 
                                         </p>
 
-                                        <button className="mt-8 flex items-center gap-2 font-semibold text-emerald-600 hover:gap-4 transition-all">
+                                         <button 
+                                             onClick={() => {
+                                                 const slug = index === 0 ? "core-recruitment" : index === 1 ? "staffing" : "software-development";
+                                                 navigate(`/services/${slug}`);
+                                             }}
+                                             className="mt-8 flex items-center gap-2 font-semibold text-emerald-600 hover:gap-4 transition-all cursor-pointer"
+                                         >
 
-                                            Learn More
+                                             Learn More
 
-                                            <ArrowRight size={18} />
+                                             <ArrowRight size={18} />
 
-                                        </button>
+                                         </button>
 
                                     </div>
 
@@ -599,7 +610,7 @@ const Services = () => {
                                 </div>
 
                                 <div className="mt-8">
-                                    <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <Link to={plan.name === "Career Kickstart" ? "/contact?role=candidate&plan=career-kickstart" : plan.name === "Professional Accelerator" ? "/contact?role=candidate&plan=professional-accelerator" : "/contact?role=candidate&plan=elite-vip"}>
                                         <Button
                                             variant={plan.popular ? "primary" : "secondary"}
                                             className="w-full py-3"

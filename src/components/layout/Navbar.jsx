@@ -1,25 +1,21 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../assets/logo/NMT-logo-3.png";
 
 const Navbar = () => {
-
+  const navigate = useNavigate();
   const [mobileMenu, setMobileMenu] = useState(false);
-
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
-
   }, []);
 
   const links = [
@@ -34,6 +30,10 @@ const Navbar = () => {
     {
       name: "Services",
       path: "/services",
+    },
+    {
+      name: "Blog",
+      path: "/blog",
     },
     {
       name: "Contact Us",
@@ -67,8 +67,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="NexMoveTalent Logo"
-              className="h-14 md:h-16 w-auto object-contain"
-            // className="h-12 md:h-14 lg:h-16 w-auto object-contain" //old one
+              className="h-10 md:h-12 w-auto object-contain"
             />
           </NavLink>
 
@@ -105,6 +104,7 @@ const Navbar = () => {
           <div className="hidden lg:block">
 
             <button
+              onClick={() => navigate("/contact?role=candidate")}
               className="
             bg-emerald-600
             text-white
@@ -117,6 +117,7 @@ const Navbar = () => {
               hover:shadow-lg
               transition-all
               duration-300
+              cursor-pointer
               "
             >
               Apply Now
@@ -163,6 +164,10 @@ const Navbar = () => {
               ))}
 
               <button
+                onClick={() => {
+                  setMobileMenu(false);
+                  navigate("/contact?role=candidate");
+                }}
                 className="
                 mt-3
                 bg-[#059669]
@@ -172,6 +177,7 @@ const Navbar = () => {
                 font-semibold
                 hover:bg-emerald-700
                 transition-colors
+                cursor-pointer
                 "
               >
                 Apply Now

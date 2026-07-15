@@ -108,6 +108,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/blog"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="hover:text-emerald-500 hover:translate-x-1.5 inline-block transition-all duration-300"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/contact"
                   onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                   className="hover:text-emerald-500 hover:translate-x-1.5 inline-block transition-all duration-300"

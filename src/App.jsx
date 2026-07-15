@@ -13,6 +13,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
+import ServiceDetail from "./pages/ServiceDetail";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -43,6 +46,9 @@ function App() {
                 <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
                 <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
                 <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+                <Route path="/services/:slug" element={<PageWrapper><ServiceDetail /></PageWrapper>} />
+                <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
+                <Route path="/blog/:id" element={<PageWrapper><BlogDetail /></PageWrapper>} />
                 <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
               </Routes>
             </AnimatePresence>

@@ -26,8 +26,8 @@ const contactCards = [
     {
         icon: Mail,
         title: "Email",
-        value: "careers@nexmovetalent.com",
-        href: "mailto:careers@nexmovetalent.com",
+        value: "info@nexmovetalent.com",
+        href: "mailto:info@nexmovetalent.com",
     },
     {
         icon: Phone,
@@ -72,7 +72,7 @@ const faqs = [
 
 const Contact = () => {
     const location = useLocation();
-    
+
     // Form State
     const [formData, setFormData] = useState({
         name: "",
@@ -81,7 +81,7 @@ const Contact = () => {
         location: "",
         message: ""
     });
-    
+
     const [status, setStatus] = useState({
         loading: false,
         success: false
@@ -92,20 +92,20 @@ const Contact = () => {
         const params = new URLSearchParams(location.search);
         const role = params.get("role");
         const plan = params.get("plan");
-        
+
         let messageText = "";
         if (role === "candidate") {
             messageText = "Hi NexMoveTalent team,\n\nI would like to submit my profile for candidate recruitment opportunities in North America. Please let me know the next steps.";
             if (plan) {
-                const planTitle = plan === "career-kickstart" ? "Career Kickstart ($5,000)" 
-                                : plan === "professional-accelerator" ? "Professional Accelerator ($7,000)" 
-                                : "Elite VIP Placement ($12,000)";
+                const planTitle = plan === "career-kickstart" ? "Career Kickstart ($5,000)"
+                    : plan === "professional-accelerator" ? "Professional Accelerator ($7,000)"
+                        : "Elite VIP Placement ($12,000)";
                 messageText = `Hi NexMoveTalent team,\n\nI want to enroll in the "${planTitle}" program. Please contact me with details on how to proceed.`;
             }
         } else if (role === "employer") {
             messageText = "Hi NexMoveTalent team,\n\nWe are looking to partner with your staffing agency to hire professionals for our team. Let's schedule a call.";
         }
-        
+
         if (messageText) {
             setFormData(prev => ({ ...prev, message: messageText }));
         }
@@ -145,7 +145,7 @@ const Contact = () => {
                 location: "",
                 message: ""
             });
-            
+
             // Clear success notification after 5 seconds
             setTimeout(() => {
                 setStatus(prev => ({ ...prev, success: false }));
@@ -176,7 +176,7 @@ const Contact = () => {
             <section className="bg-white pt-24 pb-24 overflow-hidden">
                 <div className="w-full max-w-345 mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        
+
                         {/* Left */}
                         <motion.div
                             initial={{ opacity: 0, x: -40 }}
@@ -255,7 +255,7 @@ const Contact = () => {
                         {contactCards.map((card, index) => {
                             const Icon = card.icon;
                             const isLink = !!card.href;
-                            
+
                             return (
                                 <motion.div
                                     key={index}
@@ -287,11 +287,11 @@ const Contact = () => {
             <section id="contact-form" className="pb-24 bg-white scroll-mt-28">
                 <div className="w-full max-w-345 mx-auto px-6">
                     <div className="grid lg:grid-cols-2 overflow-hidden rounded-3xl shadow-xl">
-                        
+
                         {/* Left Info Panel */}
                         <div className="bg-slate-900 text-white p-12 relative">
                             <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 pointer-events-none"></div>
-                            
+
                             <div className="relative z-10">
                                 <h2 className="text-4xl font-bold">
                                     Let's Talk About
@@ -326,7 +326,7 @@ const Contact = () => {
 
                         {/* Right Form Panel */}
                         <div className="bg-white p-12 relative">
-                            
+
                             {/* Success Toast banner using AnimatePresence */}
                             <AnimatePresence>
                                 {status.success && (
@@ -393,8 +393,8 @@ const Contact = () => {
                                     className="w-full border rounded-xl px-4 py-4 outline-none focus:border-emerald-500 transition-colors"
                                 />
 
-                                <Button 
-                                    type="submit" 
+                                <Button
+                                    type="submit"
                                     className="w-full inline-flex items-center gap-2 cursor-pointer shadow-lg hover:shadow-xl"
                                     disabled={status.loading}
                                 >
@@ -438,7 +438,7 @@ const Contact = () => {
 
                     <div className="mt-16 bg-white rounded-3xl shadow-lg p-12">
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
-                            
+
                             {/* LEFT */}
                             <div>
                                 <h3 className="text-3xl font-bold text-slate-900">
@@ -499,16 +499,16 @@ const Contact = () => {
                             We go beyond typical recruitment agencies. We provide specialized, end-to-end career consulting and corporate networking built for sustainable professional growth.
                         </p>
                     </div>
-                    
+
                     <div className="grid lg:grid-cols-3 gap-8 mt-20">
                         {/* Card 1: Strategic Career Mapping */}
                         <div className="bg-[#0f172a]/60 border border-slate-800/80 rounded-3xl p-8 hover:border-emerald-500/30 hover:shadow-xl transition-all duration-500 relative group overflow-hidden">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-lg pointer-events-none group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
-                            
+
                             <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-8 border border-emerald-500/20 group-hover:bg-emerald-600 group-hover:border-emerald-500 transition-all duration-500 text-emerald-400 group-hover:text-white">
                                 <Compass size={24} className="transition-transform duration-500 group-hover:rotate-45" />
                             </div>
-                            
+
                             <h3 className="text-xl font-bold text-white mb-4">
                                 Strategic Career Mapping
                             </h3>
@@ -520,11 +520,11 @@ const Contact = () => {
                         {/* Card 2: ATS Profile Optimization */}
                         <div className="bg-[#0f172a]/60 border border-slate-800/80 rounded-3xl p-8 hover:border-emerald-500/30 hover:shadow-xl transition-all duration-500 relative group overflow-hidden">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-lg pointer-events-none group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
-                            
+
                             <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-8 border border-emerald-500/20 group-hover:bg-emerald-600 group-hover:border-emerald-500 transition-all duration-500 text-emerald-400 group-hover:text-white">
                                 <FileText size={24} className="transition-transform duration-500 group-hover:scale-105" />
                             </div>
-                            
+
                             <h3 className="text-xl font-bold text-white mb-4">
                                 ATS Profile Optimization
                             </h3>
@@ -536,11 +536,11 @@ const Contact = () => {
                         {/* Card 3: High-Tier Network Access */}
                         <div className="bg-[#0f172a]/60 border border-slate-800/80 rounded-3xl p-8 hover:border-emerald-500/30 hover:shadow-xl transition-all duration-500 relative group overflow-hidden">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-lg pointer-events-none group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
-                            
+
                             <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-8 border border-emerald-500/20 group-hover:bg-emerald-600 group-hover:border-emerald-500 transition-all duration-500 text-emerald-400 group-hover:text-white">
                                 <Handshake size={24} className="transition-transform duration-500 group-hover:translate-x-0.5" />
                             </div>
-                            
+
                             <h3 className="text-xl font-bold text-white mb-4">
                                 High-Tier Network Access
                             </h3>

@@ -219,7 +219,7 @@ const PrivacyPolicy = () => {
                     Your Rights under CCPA (California) & PIPEDA (Canada):
                   </p>
                   <p className="mb-6">
-                    Depending on your location, you have rights regarding access, deletion, and corrections of your data. You may write to us at careers@nexmovetalent.com to request access to, edit, or delete any personal information that you have provided to us.
+                    Depending on your location, you have rights regarding access, deletion, and corrections of your data. You may write to us at info@nexmovetalent.com to request access to, edit, or delete any personal information that you have provided to us.
                   </p>
 
                   <div className="bg-slate-50 border border-slate-100 p-8 rounded-3xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mt-8">

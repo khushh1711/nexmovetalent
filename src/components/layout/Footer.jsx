@@ -7,7 +7,7 @@ import {
   ArrowRight,
   Shield,
 } from "lucide-react";
-import logo from "../../assets/logo/NMT-logo-4.png";
+import logo from "../../assets/logo/dark_logo.png";
 import eVerifyLogo from "../../assets/logo/e-verify.jpg";
 
 const Footer = () => {
@@ -37,12 +37,12 @@ const Footer = () => {
             <Link
               to="/"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="bg-white/95 p-2 px-3 rounded-xl inline-block max-w-max hover:bg-white transition-colors duration-300 shadow-sm"
+              className="inline-block max-w-max hover:opacity-85 transition-opacity duration-300"
             >
               <img
                 src={logo}
                 alt="NexMoveTalent Logo"
-                className="h-10 w-auto object-contain"
+                className="h-16 md:h-20 w-auto object-contain"
               />
             </Link>
 
@@ -53,11 +53,11 @@ const Footer = () => {
             {/* Contact Details */}
             <div className="flex flex-col gap-3 text-sm text-slate-400">
               <a
-                href="mailto:careers@nexmovetalent.com"
+                href="mailto:info@nexmovetalent.com"
                 className="flex items-center gap-3 hover:text-emerald-500 transition-colors"
               >
                 <Mail size={16} className="text-emerald-500 shrink-0" />
-                careers@nexmovetalent.com
+                info@nexmovetalent.com
               </a>
               <a
                 href="tel:+18005550199"

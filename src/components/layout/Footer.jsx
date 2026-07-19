@@ -266,22 +266,31 @@ const Footer = () => {
               <strong>Equal Opportunity Employer (EOE):</strong> NexMoveTalent is committed to providing equal opportunities to all job seekers. All qualified candidates will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, age, disability status, veteran status, or any other characteristic protected by law.
             </p>
           </div>
-          <div className="flex items-center gap-4 shrink-0 bg-white/95 p-3 rounded-2xl shadow-sm border border-slate-700/50">
+          <a
+            href="https://www.e-verify.gov"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 shrink-0 bg-white/95 p-3 rounded-2xl shadow-sm border border-slate-700/50 hover:bg-white hover:shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
+          >
             <img src={eVerifyLogo} alt="E-Verify Registered" className="h-10 w-auto object-contain" />
             <div className="text-[10px] text-slate-800 font-semibold leading-tight">
               E-Verify® Registered<br />
               <span className="text-slate-500 font-medium">Employment Verified</span>
             </div>
-          </div>
+          </a>
         </div>
 
         {/* Bottom copyright & legal links */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© {currentYear} NexMoveTalent. All rights reserved.</p>
+          <p>
+            <Link to="/" className="hover:text-emerald-500 transition-colors">
+              © {currentYear} NexMoveTalent. All rights reserved.
+            </Link>
+          </p>
           <div className="flex gap-6">
-            <Link to="/contact" className="hover:text-emerald-500 transition-colors">Privacy Policy</Link>
-            <Link to="/contact" className="hover:text-emerald-500 transition-colors">Terms of Service</Link>
-            <Link to="/contact" className="hover:text-emerald-500 transition-colors">Cookie Settings</Link>
+            <Link to="/privacy" className="hover:text-emerald-500 transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-emerald-500 transition-colors">Terms of Service</Link>
+            <Link to="/cookies" className="hover:text-emerald-500 transition-colors">Cookie Settings</Link>
           </div>
         </div>
 

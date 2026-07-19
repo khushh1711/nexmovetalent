@@ -16,6 +16,9 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import ServiceDetail from "./pages/ServiceDetail";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -50,6 +53,9 @@ function App() {
                 <Route path="/blog" element={<PageWrapper><Blog /></PageWrapper>} />
                 <Route path="/blog/:id" element={<PageWrapper><BlogDetail /></PageWrapper>} />
                 <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+                <Route path="/privacy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+                <Route path="/terms" element={<PageWrapper><TermsOfService /></PageWrapper>} />
+                <Route path="/cookies" element={<PageWrapper><CookiePolicy /></PageWrapper>} />
               </Routes>
             </AnimatePresence>
           </main>

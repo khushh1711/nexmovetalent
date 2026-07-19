@@ -34,7 +34,7 @@ const trustPoints = [
 const stats = [
     {
         icon: <Users size={18} />,
-        title: "5000+",
+        title: "500+",
         subtitle: "Candidates Connected",
     },
 ];
@@ -76,34 +76,42 @@ const industries = [
     {
         title: "Information Technology",
         icon: <Monitor size={28} />,
+        description: "Placing top-tier software engineers, cloud architects, cybersecurity specialists, and IT leaders in cutting-edge tech roles.",
     },
     {
         title: "Healthcare",
         icon: <HeartPulse size={28} />,
+        description: "Connecting registered nurses, allied health professionals, medical technicians, and administrators with premium medical facilities.",
     },
     {
         title: "Finance & Banking",
         icon: <Landmark size={28} />,
+        description: "Matching skilled financial analysts, investment bankers, accountants, and wealth managers with leading financial institutions.",
     },
     {
         title: "Engineering",
         icon: <Cog size={28} />,
+        description: "Bridging the gap for mechanical, electrical, civil, and software engineers with innovative manufacturing and infrastructure projects.",
     },
     {
         title: "Manufacturing",
         icon: <Factory size={28} />,
+        description: "Staffing essential operations, quality assurance, logistics, supply chain, and production management roles for modern plants.",
     },
     {
         title: "Construction",
         icon: <Building2 size={28} />,
+        description: "Supplying project managers, safety inspectors, civil estimators, and skilled site supervisors for commercial and residential builders.",
     },
     {
         title: "Retail",
         icon: <ShoppingBag size={28} />,
+        description: "Placing store managers, logistics operators, category planners, and corporate retail leaders to optimize high-volume operations.",
     },
     {
         title: "Professional Services",
         icon: <BriefcaseBusiness size={28} />,
+        description: "Recruiting business consultants, legal professionals, marketing experts, and executive support specialists for corporate leaders.",
     },
 ];
 
@@ -142,21 +150,21 @@ const processSteps = [
 
 const testimonials = [
     {
-        name: "Sarah Jenkins",
+        name: "Aarav Sharma",
         role: "Senior Cloud Architect",
         review:
             "NexMoveTalent didn't just find me a job—they found the right opportunity that aligned perfectly with my career goals.",
-        image: "https://randomuser.me/api/portraits/women/65.jpg",
+        image: "https://randomuser.me/api/portraits/men/65.jpg",
     },
     {
-        name: "David Chen",
+        name: "Rohan Mehta",
         role: "HR Director, Tech Global",
         review:
             "Their recruitment process was transparent, fast and incredibly professional. Highly recommended.",
         image: "https://randomuser.me/api/portraits/men/42.jpg",
     },
     {
-        name: "Elena Rodriguez",
+        name: "Priya Patel",
         role: "Registered Nurse",
         review:
             "Excellent communication from application to placement. They genuinely cared about my success.",
@@ -335,7 +343,7 @@ const Home = () => {
                                 <div>
 
                                     <h4 className="font-bold text-lg">
-                                        <AnimatedCounter value="5000+" />
+                                        <AnimatedCounter value="500+" />
                                     </h4>
 
                                     <p className="text-sm text-slate-500">
@@ -366,7 +374,7 @@ const Home = () => {
                         <div>
 
                             <h2 className="text-5xl lg:text-6xl font-bold text-slate-900">
-                                <AnimatedCounter value="5000+" />
+                                <AnimatedCounter value="500+" />
                             </h2>
 
                             <p className="mt-3 text-slate-500">
@@ -380,7 +388,7 @@ const Home = () => {
                         <div>
 
                             <h2 className="text-5xl lg:text-6xl font-bold text-slate-900">
-                                <AnimatedCounter value="300+" />
+                                <AnimatedCounter value="250+" />
                             </h2>
 
                             <p className="mt-3 text-slate-500">
@@ -408,7 +416,7 @@ const Home = () => {
                         <div>
 
                             <h2 className="text-5xl lg:text-6xl font-bold text-slate-900">
-                                <AnimatedCounter value="48h" />
+                                <AnimatedCounter value="24/7" />
                             </h2>
 
                             <p className="mt-3 text-slate-500">
@@ -854,8 +862,7 @@ const Home = () => {
 
                                 <p className="mt-3 text-slate-500 leading-7">
 
-                                    Specialized recruitment solutions and career
-                                    opportunities tailored for this industry.
+                                    {industry.description}
 
                                 </p>
 

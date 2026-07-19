@@ -32,7 +32,7 @@ const WorldMap = () => {
       label: "USA",
       tagline: "Primary Market Hub",
       stats: [
-        { icon: Users, label: "Hiring Partners", value: "35+ Companies" },
+        { icon: Users, label: "Hiring Partners", value: "180+ Companies" },
         { icon: Briefcase, label: "Active Positions", value: "120+ Roles" },
         { icon: Award, label: "Recruiters", value: "24/7 Coverage" }
       ],
@@ -46,7 +46,7 @@ const WorldMap = () => {
       label: "CAN",
       tagline: "Rapid Growth Market",
       stats: [
-        { icon: Users, label: "Hiring Partners", value: "15+ Companies" },
+        { icon: Users, label: "Hiring Partners", value: "70+ Companies" },
         { icon: Briefcase, label: "Active Positions", value: "50+ Roles" },
         { icon: Award, label: "Success Rate", value: "98% Placed" }
       ],
@@ -59,8 +59,8 @@ const WorldMap = () => {
     tagline: "Unified Recruitment Ecosystem",
     desc: "NexMoveTalent provides cross-border recruitment solutions connecting elite professionals to top-tier organizations across the USA and Canada.",
     stats: [
-      { icon: Users, label: "Total Partners", value: "50+ Brands" },
-      { icon: Briefcase, label: "Total Placed", value: "5,000+ Talents" },
+      { icon: Users, label: "Total Partners", value: "250+ Brands" },
+      { icon: Briefcase, label: "Total Placed", value: "500+ Talents" },
       { icon: Award, label: "Placement Success", value: "98% Rate" }
     ]
   };

@@ -232,7 +232,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1CnZmMd48s/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all duration-300 hover:-translate-y-1 text-slate-400"
@@ -243,7 +243,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/nexmovetalent?igsh=N2dvbzVvb29kajNp&utm_source=qr"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-all duration-300 hover:-translate-y-1 text-slate-400"

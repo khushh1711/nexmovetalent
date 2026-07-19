@@ -54,7 +54,7 @@ const faqs = [
     },
     {
         question: "Do you charge candidates?",
-        answer: "No. Our recruitment services are completely free for candidates."
+        answer: "Standard recruitment and candidate matching services are completely free. We only charge for our optional, structured preparation and bootcamp plans (Core, Prime, Pro) which offer personalized resume enhancements, dedicated training, and direct career manager assistance."
     },
     {
         question: "Can fresh graduates apply?",
@@ -97,9 +97,9 @@ const Contact = () => {
         if (role === "candidate") {
             messageText = "Hi NexMoveTalent team,\n\nI would like to submit my profile for candidate recruitment opportunities in North America. Please let me know the next steps.";
             if (plan) {
-                const planTitle = plan === "career-kickstart" ? "Career Kickstart ($5,000)"
-                    : plan === "professional-accelerator" ? "Professional Accelerator ($7,000)"
-                        : "Elite VIP Placement ($12,000)";
+                const planTitle = plan === "core" ? "Core (US$1,000 + 12%)"
+                    : plan === "prime" ? "Prime (US$2,500 + 10%)"
+                        : "Pro (US$7,500 One-Time)";
                 messageText = `Hi NexMoveTalent team,\n\nI want to enroll in the "${planTitle}" program. Please contact me with details on how to proceed.`;
             }
         } else if (role === "employer") {
@@ -451,11 +451,11 @@ const Contact = () => {
                                 </p>
                                 <div className="mt-10 grid grid-cols-2 gap-6">
                                     <div>
-                                        <h4 className="text-4xl font-bold text-emerald-500">50+</h4>
+                                        <h4 className="text-4xl font-bold text-emerald-500">250+</h4>
                                         <p className="text-slate-500 mt-2">Hiring Partners</p>
                                     </div>
                                     <div>
-                                        <h4 className="text-4xl font-bold text-emerald-500">5,000+</h4>
+                                        <h4 className="text-4xl font-bold text-emerald-500">500+</h4>
                                         <p className="text-slate-500 mt-2">Candidates Connected</p>
                                     </div>
                                     <div>
@@ -463,8 +463,8 @@ const Contact = () => {
                                         <p className="text-slate-500 mt-2">Placement Success</p>
                                     </div>
                                     <div>
-                                        <h4 className="text-4xl font-bold text-emerald-500">48h</h4>
-                                        <p className="text-slate-500 mt-2">Average Response</p>
+                                        <h4 className="text-4xl font-bold text-emerald-500">24/7</h4>
+                                        <p className="text-slate-500 mt-2">Initial Response</p>
                                     </div>
                                 </div>
                             </div>

@@ -281,7 +281,7 @@ const About = () => {
                                     <div>
 
                                         <h3 className="text-xl font-bold text-slate-900">
-                                            <AnimatedCounter value="5000+" />
+                                            <AnimatedCounter value="500+" />
                                         </h3>
 
                                         <p className="text-sm text-slate-500">
@@ -885,7 +885,7 @@ const About = () => {
                         <div>
 
                             <h2 className="text-5xl font-bold text-emerald-600">
-                                <AnimatedCounter value="5000+" />
+                                <AnimatedCounter value="500+" />
                             </h2>
 
                             <p className="mt-4 text-slate-600">
@@ -899,7 +899,7 @@ const About = () => {
                         <div>
 
                             <h2 className="text-5xl font-bold text-emerald-600">
-                                <AnimatedCounter value="300+" />
+                                <AnimatedCounter value="250+" />
                             </h2>
 
                             <p className="mt-4 text-slate-600">

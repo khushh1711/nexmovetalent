@@ -87,7 +87,7 @@ const faqs = [
     {
         question: "Who can apply through NexMoveTalent?",
         answer:
-            "Students, fresh graduates and experienced professionals looking for new career opportunities can apply through NexMoveTalent.",
+            "Candidates (students, fresh graduates, and experienced professionals) looking for career placement can apply. Additionally, companies/employers seeking recruitment or staffing services and organizations looking for software development solutions can partner with us by submitting their requirements.",
     },
     {
         question: "Do you only recruit for IT roles?",
@@ -97,7 +97,7 @@ const faqs = [
     {
         question: "Do candidates pay recruitment fees?",
         answer:
-            "No. Our recruitment services are completely free for job seekers.",
+            "Our standard recruitment and staffing placement services are completely free for job seekers. However, we offer structured preparation plans (Core, Prime, Pro) for students and graduates looking for specialized training, dedicated career manager coaching, and premium direct profile marketing bootcamp programs.",
     },
     {
         question: "Can freshers apply?",
@@ -113,48 +113,69 @@ const faqs = [
 
 const plans = [
     {
-        name: "Career Kickstart",
-        price: "$5,000",
-        period: "one-time",
-        tagline: "Ideal for fresh graduates seeking entry-level positions.",
+        name: "Core",
+        price: "US$1,000",
+        period: "+ 12%",
+        tagline: "Essential career support for entry-level candidates.",
         features: [
-            "Resume & LinkedIn Optimization",
-            "3 Private Interview Coaching Sessions",
-            "Direct Partner Network Submission",
-            "Standard Placement Support (Email)",
-            "Career Path Consultation",
+            "Profile Analysis",
+            "Resume Understanding",
+            "Resume Enhancement",
+            "Profile Enhancement",
+            "Profile Marketing",
+            "Unpaid Offer Letter Support",
+            "Basic Study Materials",
+            "Interview Preparation",
+            "5 Interview Support Sessions",
         ],
         buttonText: "Enroll Now",
         popular: false,
     },
     {
-        name: "Professional Accelerator",
-        price: "$7,000",
-        period: "one-time",
-        tagline: "Our most popular track for specialized IT & healthcare roles.",
+        name: "Prime",
+        price: "US$2,500",
+        period: "+ 10%",
+        tagline: "Comprehensive coaching, mock interviews, and unlimited support.",
         features: [
-            "Premium Refined Resume & Portfolio",
-            "Unlimited Technical Mock Interviews",
-            "Priority Hiring Manager Matching",
-            "IT Project Direct Placement Track",
-            "Dedicated Personal Career Manager",
-            "1-on-1 Career Mentorship",
+            "Profile Analysis",
+            "Resume Understanding",
+            "Resume Enhancement",
+            "Profile Enhancement",
+            "Profile Marketing",
+            "Unpaid Offer Letter Support",
+            "Basic Study Materials",
+            "Interview Preparation",
+            "5 Interview Support Sessions",
+            "1-Month Training",
+            "Mock Interview Sessions",
+            "Unlimited Interview Support",
+            "Priority Profile Reviews",
         ],
         buttonText: "Join Program",
         popular: true,
     },
     {
-        name: "Elite VIP Placement",
-        price: "$12,000",
+        name: "Pro",
+        price: "US$7,500",
         period: "one-time",
-        tagline: "Exclusive fast-track track for top-tier multinationals.",
+        tagline: "End-to-end placement track with a dedicated manager.",
         features: [
-            "Guaranteed Corporate Bootcamp Access",
-            "Executive Fast-Track Placement",
-            "1-on-1 Senior Industry Director Mentoring",
-            "Guaranteed Placement Support Window",
-            "Lifetime Alumni Network Access",
-            "24/7 Priority VIP Support Line",
+            "Profile Analysis",
+            "Resume Understanding",
+            "Resume Enhancement",
+            "Profile Enhancement",
+            "Profile Marketing",
+            "Unpaid Offer Letter Support",
+            "Basic Study Materials",
+            "Interview Preparation",
+            "5 Interview Support Sessions",
+            "1-Month Training",
+            "Mock Interview Sessions",
+            "Unlimited Interview Support",
+            "Priority Profile Reviews",
+            "Dedicated Relationship Manager",
+            "Priority Assistance",
+            "End-to-End Candidate Support",
         ],
         buttonText: "Get VIP Access",
         popular: false,
@@ -596,7 +617,11 @@ const Services = () => {
                                     
                                     <div className="mt-6 flex items-baseline gap-1.5">
                                         <span className="text-5xl font-extrabold text-slate-900">{plan.price}</span>
-                                        <span className="text-slate-500 text-sm font-medium">/ {plan.period}</span>
+                                        {plan.period && (
+                                            <span className="text-slate-500 text-sm font-medium">
+                                                {plan.period.startsWith("+") ? "" : "/ "}{plan.period}
+                                            </span>
+                                        )}
                                     </div>
 
                                     <ul className="space-y-4 mt-8">
@@ -610,7 +635,7 @@ const Services = () => {
                                 </div>
 
                                 <div className="mt-8">
-                                    <Link to={plan.name === "Career Kickstart" ? "/contact?role=candidate&plan=career-kickstart" : plan.name === "Professional Accelerator" ? "/contact?role=candidate&plan=professional-accelerator" : "/contact?role=candidate&plan=elite-vip"}>
+                                    <Link to={plan.name === "Core" ? "/contact?role=candidate&plan=core" : plan.name === "Prime" ? "/contact?role=candidate&plan=prime" : "/contact?role=candidate&plan=pro"}>
                                         <Button
                                             variant={plan.popular ? "primary" : "secondary"}
                                             className="w-full py-3"

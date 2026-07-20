@@ -151,21 +151,21 @@ const processSteps = [
 const testimonials = [
     {
         name: "Aarav Sharma",
-        role: "Senior Cloud Architect",
+        role: "AI/ML Engineer",
         review:
             "NexMoveTalent didn't just find me a job—they found the right opportunity that aligned perfectly with my career goals.",
         image: "https://randomuser.me/api/portraits/men/65.jpg",
     },
     {
         name: "Rohan Mehta",
-        role: "HR Director, Tech Global",
+        role: "Supply Chain Manager",
         review:
             "Their recruitment process was transparent, fast and incredibly professional. Highly recommended.",
         image: "https://randomuser.me/api/portraits/men/42.jpg",
     },
     {
         name: "Priya Patel",
-        role: "Registered Nurse",
+        role: "Financial Analyst",
         review:
             "Excellent communication from application to placement. They genuinely cared about my success.",
         image: "https://randomuser.me/api/portraits/women/54.jpg",
@@ -238,21 +238,21 @@ const Home = () => {
 
                             {/* Buttons */}
 
-                             <div className="mt-10 flex flex-wrap gap-5">
+                            <div className="mt-10 flex flex-wrap gap-5">
 
-                                 <Button onClick={() => navigate('/contact?role=candidate')}>
+                                <Button onClick={() => navigate('/contact?role=candidate')}>
 
-                                     Apply Now
+                                    Apply Now
 
-                                 </Button>
+                                </Button>
 
-                                 <Button variant="secondary" onClick={() => navigate('/services')}>
+                                <Button variant="secondary" onClick={() => navigate('/services')}>
 
-                                     Explore Services
+                                    Explore Services
 
-                                 </Button>
+                                </Button>
 
-                             </div>
+                            </div>
 
                             {/* Trust Points */}
 
@@ -292,10 +292,10 @@ const Home = () => {
 
                             {/* Image */}
 
-                             <FadeInImage
-                                 src={heroImg}
-                                 alt="Recruitment"
-                                 className="
+                            <FadeInImage
+                                src={heroImg}
+                                alt="Recruitment"
+                                className="
                                  w-full
                                  max-w-160
                                  ml-auto
@@ -667,11 +667,11 @@ const Home = () => {
                             viewport={{ once: true }}
                         >
 
-                             <FadeInImage
-                                 src={trustImg}
-                                 alt="Candidate Success"
-                                 className="rounded-3xl shadow-xl w-full object-cover"
-                             />
+                            <FadeInImage
+                                src={trustImg}
+                                alt="Candidate Success"
+                                className="rounded-3xl shadow-xl w-full object-cover"
+                            />
 
                         </motion.div>
 
@@ -796,13 +796,13 @@ const Home = () => {
 
                         </div>
 
-                         <Button
-                             variant="secondary"
-                             className="mt-8 lg:mt-0"
-                             onClick={() => navigate('/services')}
-                         >
-                             View All Sectors
-                         </Button>
+                        <Button
+                            variant="secondary"
+                            className="mt-8 lg:mt-0"
+                            onClick={() => navigate('/services')}
+                        >
+                            View All Sectors
+                        </Button>
 
                     </motion.div>
 
@@ -1039,11 +1039,11 @@ const Home = () => {
 
                                 <div className="flex items-center gap-4 mt-8">
 
-                                     <FadeInImage
-                                         src={item.image}
-                                         alt={item.name}
-                                         className="w-14 h-14 rounded-full object-cover shrink-0"
-                                     />
+                                    <FadeInImage
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-14 h-14 rounded-full object-cover shrink-0"
+                                    />
 
                                     <div>
 
@@ -1128,21 +1128,21 @@ const Home = () => {
 
                         </p>
 
-                         <div className="mt-12 flex flex-wrap justify-center gap-5">
+                        <div className="mt-12 flex flex-wrap justify-center gap-5">
 
-                             <Button onClick={() => navigate('/contact?role=candidate')}>
+                            <Button onClick={() => navigate('/contact?role=candidate')}>
 
-                                 Apply Now
+                                Apply Now
 
-                             </Button>
+                            </Button>
 
-                             <Button variant="secondary" onClick={() => navigate('/contact')}>
+                            <Button variant="secondary" onClick={() => navigate('/contact')}>
 
-                                 Contact Us
+                                Contact Us
 
-                             </Button>
+                            </Button>
 
-                         </div>
+                        </div>
 
                     </motion.div>
 

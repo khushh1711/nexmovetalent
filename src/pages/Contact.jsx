@@ -11,13 +11,15 @@ import {
     Send,
     Compass,
     FileText,
-    Handshake
+    Handshake,
+    AlertCircle
 } from "lucide-react";
 
 import Button from "../components/common/Button";
 import { Helmet } from "react-helmet-async";
 import WorldMap from "../components/common/WorldMap";
 import FadeInImage from "../components/common/FadeInImage";
+import { sendContactEmail } from "../utils/emailService";
 
 // Images
 import heroImg from "../assets/images/hero/contact-1.jpg";
@@ -84,7 +86,8 @@ const Contact = () => {
 
     const [status, setStatus] = useState({
         loading: false,
-        success: false
+        success: false,
+        error: null
     });
 
     useEffect(() => {
@@ -126,18 +129,18 @@ const Contact = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleFormSubmit = (e) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
         if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
             alert("Please fill in Name, Email, and Message fields.");
             return;
         }
 
-        setStatus({ loading: true, success: false });
+        setStatus({ loading: true, success: false, error: null });
 
-        // Simulate API call
-        setTimeout(() => {
-            setStatus({ loading: false, success: true });
+        try {
+            await sendContactEmail(formData);
+            setStatus({ loading: false, success: true, error: null });
             setFormData({
                 name: "",
                 email: "",
@@ -150,7 +153,14 @@ const Contact = () => {
             setTimeout(() => {
                 setStatus(prev => ({ ...prev, success: false }));
             }, 5000);
-        }, 1500);
+        } catch (err) {
+            setStatus({ loading: false, success: false, error: err.message || "Failed to send email." });
+            
+            // Clear error notification after 8 seconds
+            setTimeout(() => {
+                setStatus(prev => ({ ...prev, error: null }));
+            }, 8000);
+        }
     };
 
     const scrollToForm = () => {
@@ -338,6 +348,17 @@ const Contact = () => {
                                     >
                                         <CheckCircle size={18} className="text-emerald-600 shrink-0" />
                                         <span>Thank you! Your message has been sent successfully. Our team will contact you within 24 hours.</span>
+                                    </motion.div>
+                                )}
+                                {status.error && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -10 }}
+                                        className="mb-6 p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-sm font-medium flex items-center gap-2"
+                                    >
+                                        <AlertCircle size={18} className="text-rose-600 shrink-0" />
+                                        <span>{status.error}</span>
                                     </motion.div>
                                 )}
                             </AnimatePresence>

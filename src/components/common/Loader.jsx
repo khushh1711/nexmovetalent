@@ -57,7 +57,7 @@ const Loader = () => {
           transition={{ delay: 0.8 }}
           className="mt-3 text-slate-500 text-lg tracking-wide"
         >
-          Connecting Talent • Creating Opportunities
+          Connecting Talent • Creating Future
         </motion.p>
 
         {/* Progress Bar */}
